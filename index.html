@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Stop Fraud</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+             
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Notice</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">For more</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Avoid fraud</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+               <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="apis">Extra</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" onclick="register()"  href="register">Register</a>
+            </li>
+             <li class="nav-item" id="loginB">
+              <a onclick="login()" class="nav-link js-scroll-trigger" href="login" >Login</a>
+            </li>
+             <li class ="nav-item">
+                <a onclick="login()" class="nav-link js-scroll-trigger" id ="name" href="favlist"></a>
+            </li>
+             <li class ="nav-item" id ="logout">
+                <a onclick="logout()"  class="nav-link js-scroll-trigger" >Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <script>
+      
+      
+      function logout(){
+      localStorage.clear();
+         window.location.href = "/index";
+      }
+      
+    function login(){
+//  alert("log");
+  window.location.href = "/login";
+}
+
+    function register(){
+//  alert("reg");
+  window.location.href = "/register";
+}
+      
+      if(localStorage.getItem("email")!=null){
+      document.getElementById("name").innerHTML = localStorage.getItem("email");
+      document.getElementById("loginB").style.display = "none";
+      }else{
+        document.getElementById("logout").style.display = "none";
+      }
+      
+    </script> 
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Welcome To Our Website!</div>
+          <div class="intro-heading text-uppercase">how to anti-deception!</div>
+          
+          <br><br><br><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Notice</h2>
+            <h3 class="section-subheading text-muted">Fraud is deliberate deception to secure unfair or unlawful gain, or to deprive a victim of a legal right. </h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Shopping Crime</h4>
+            <p class="text-muted">Individuals should not leave their purses or wallets unattended while shopping. Especially during the Holiday Season, criminals will be looking for the opportunity to victimize individuals that do not take precautions to minimize their risk of theft.</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Cybercrime</h4>
+            <p class="text-muted">Issues surrounding these types of crimes have become high-profile, particularly those surrounding hacking, copyright infringement, unwarranted mass-surveillance, sextortion, child pornography, and child grooming.</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Password Security</h4>
+            <p class="text-muted">Passwords are usually stolen during what's called a phishing attempt where the hacker gives the user a website or form that the user thinks is the real login page for whatever site they want the password for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+             <input type="text" placeholder="Search.." name="search" id="myInput">
+              <button type="submit" onclick="myFunction()"><i class="fa fa-search" ></i></button> <br><br>
+            <script>
+        function myFunction() {
+            var input, filter, ul, li , i;
+           input = document.getElementById("myInput");
+           filter = input.value.toUpperCase();
+           ul = document.getElementById("mylist");
+     li = ul.getElementsByTagName("div");
+    for (i = 0; i < li.length; i++) {
+ 
+        if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+           <h2 class="section-heading text-uppercase">For more</h2>
+            <h3 class="section-subheading text-muted">Why people fraud? The purpose of fraud may be monetary gain or other benefits.</h3>
+          </div>
+        </div>
+        <div class="row" id="mylist">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/Victimcrop.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Individual fraud</h4>
+              <p class="text-muted">Abuse of trust</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/Identitycrop.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Identity fraud</h4>
+              <p class="text-muted">Personal details are stolen</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/Banknotescrop.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Advance fee fraud</h4>
+              <p class="text-muted">When people respond</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/Londoncrop.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Corporate fraud</h4>
+              <p class="text-muted">Can be any fraud </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/iStockcrop.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Vendor Fraud</h4>
+              <p class="text-muted">In collusion with vendors</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/iSCCcrop.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Asset Misappropriation</h4>
+              <p class="text-muted">Known as insider fraud</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">History</h2>
+            <h3 class="section-subheading text-muted">how did the frauds of yesterday morph into the sophisticated frauds of today?</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/ClarenceHatrycrop.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>1929</h4>
+                    <h4 class="subheading">Clarence Hatry</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">The exhibit also brings lesser-known fraudsters to light like Clarence Hatry. Financial historians generally agree that the infamous stock market crash of 1929 actually began with a chain of events surrounding the bankruptcy of this flamboyant English financier. On Sept. 20, 1929, it was revealed that Hatry had forged $67 million in municipal bonds to cover his debts. As a consequence, many of his shareholders had to fortify themselves by selling their American holdings, creating panic in the market. Less than 30 days later, the stock market crashed, causing the worse financial crisis in U.S. history. Hatry served 15 years in prison for his crimes.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/IvanBoeskycrop.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>1975</h4>
+                    <h4 class="subheading">Ivan Boesky</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">In the late 1980s, Ivan Boesky’s name became synonymous with insider trading on Wall Street. After being caught, Boesky informed on his fellow traders, including Michael Milken, and received a three-and-a-half year prison sentence and a fine of $100 million.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/worldcomcrop.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2002</h4>
+                    <h4 class="subheading">WorldCom</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">WorldCom, Inc., headquartered in Clinton, Mississippi, fell victim to an $11 billion accounting scandal that resulted in the company filing bankruptcy in 2002 — the largest bankruptcy in U.S. history at the time. Its CEO, Bernard Ebbers, was convicted of fraud and conspiracy and sentenced to twenty-five years in prison.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/Rigascrop.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2003</h4>
+                    <h4 class="subheading">Adelphia Corporation</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Adelphia Corporation was founded in 1972 by John Rigas and quickly became one of the nation’s largest providers of cable television services. However, according to prosecutors, Rigas and his family used the public company as their “private piggy bank,” looting the organization of hundreds of millions of dollars and causing shareholder losses of more than $60 billion. In 2005, Rigas, his two sons, and two other executives were sentenced on several fraud charges to lengthy prison terms. </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>Please
+                    <br>Stop
+                    <br>Fraud!</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Avoid fraud</h2>
+            <h3 class="section-subheading text-muted">Crooks use clever schemes to defraud millions of people every year. They often combine new technology with old tricks to get people to send money or give out personal information. Here are some practical tips to help you stay a step ahead.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/unknowncallercrop.jpg" alt="">
+              <h4>Don’t believe your caller ID</h4>
+              <p class="text-muted">The truth?</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+         
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/GoogleSearchcrop.jpg" alt="">
+              <h4>Do online searches</h4>
+              <p class="text-muted">describes your situation.</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+          
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/blackcrop.jpg" alt="">
+              <h4>Spot imposters</h4>
+              <p class="text-muted">Don’t send anything.</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+              
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">There are three things in the world that deserve no mercy, hypocrisy, fraud, and tyranny.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h3 class="section-subheading text-muted">Please state your opion or share your experience.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="contactForm" name="sentMessage" novalidate>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; Your Website 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+         
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Individual fraud</h2>
+                  <p class="item-intro text-muted">Abuse of trust.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/Victim.jpg" alt="">
+                  <p> Friends, family members, carers or company employees may be asked to look after your personal or business finances. They may instead take advantage of their access to bank accounts or information for their own benefit, or misuse the assets of a business to embezzle funds for themselves.</p>
+                  <ul class="list-inline">
+                    <li>If you have been given a position of trust, it is your responsibility to keep a close eye on the individual’s finances, particularly if they are vulnerable. Handle bills and statements with care and shred them before throwing them out.</li>
+                    
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "background-color: #4CAF50;" id="like1" >
+                    Like </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "background-color: #f9ee02; ">
+                    <i class="fa fa-times"></i>
+                    Close </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Identity fraud</h2>
+                  <p class="item-intro text-muted">Personal details are stolen.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/Identity.jpg" alt="">
+                  <p>Identity theft happens when fraudsters access enough information about someone’s identity (such as their name, date of birth, current or previous addresses) to commit identity fraud. Identity theft can take place whether the fraud victim is alive or deceased.</p>
+                  <ul class="list-inline">
+                    <li>If you’re a victim of identity theft, it can lead to fraud that can have a direct impact on your personal finances and could also make it difficult for you to obtain loans, credit cards or a mortgage until the matter is resolved.</li>
+                    
+                  </ul>
+                 <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #4CAF50; " id = "like2">
+                    Like </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #f9ee02; ">
+                    <i class="fa fa-times"></i>
+                    Close </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Advance fee fraud</h2>
+                  <p class="item-intro text-muted">When people respond.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/Banknotes.jpg" alt="">
+                  <p>Advance fee fraud is when fraudsters target victims to make advance or upfront payments for goods, services and/or financial gains that do not materialise.</p>
+                  <ul class="list-inline">
+                    <li>Some examples include bogus publishers, invention promotion and patent companies or model and casting agencies, all promising to launch a person’s career.</li>
+                    
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #4CAF50; " id = "like3">
+                    Like </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #f9ee02; ">
+                    <i class="fa fa-times"></i>
+                    Close </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Corporate fraud</h2>
+                  <p class="item-intro text-muted">Can be any fraud.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/London.jpg" alt="">
+                  <p>Corporate fraud consists of activities undertaken by an individual or company that are done in a dishonest or illegal manner, and are designed to give an advantage to the perpetrating individual or company. Corporate fraud schemes go beyond the scope of an employee's stated position, and are marked by their complexity and economic impact on the business, other employees and outside parties.</p>
+                  <ul class="list-inline">
+                    <li>Corporate fraud can be difficult to prevent and to catch. By creating effective policies, a system of checks and balances and physical security, a company may limit the extent to which fraud can take place. It is considered a white collar crime.</li>
+                  
+                  </ul>
+                 <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #4CAF50; " id = "like4">
+                    Like </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #f9ee02; ">
+                    <i class="fa fa-times"></i>
+                    Close </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Vendor Fraud</h2>
+                  <p class="item-intro text-muted">In collusion with vendors.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/iStock.jpg" alt="">
+                  <p>Vendor fraud can be committed by employees acting alone or in collusion with vendors. This type of fraud can also be committed by vendors on their own.</p>
+                  <ul class="list-inline">
+                    <li>Review the vendor master file to check that volume of billing is reasonable and consistent. Conduct thorough background checks on new employees. Implement checks and balances on payments to vendors.</li>
+                   
+                  </ul>
+                 <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #4CAF50; " id = "like5">
+                    Like </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #f9ee02; ">
+                    <i class="fa fa-times"></i>
+                    Close </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Asset Misappropriation</h2>
+                  <p class="item-intro text-muted">Known as insider fraud.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/iSCC.jpg" alt="">
+                  <p>Asset misappropriation is a broad term that describes a vast number of employee fraud schemes. Simply, it’s the theft of company assets by an employee, also known as insider fraud.</p>
+                  <ul class="list-inline">
+                    <li>Conduct thorough background checks on new employees. Implement an anonymous ethics hotline to encourage employees to report wrongdoing. Don’t pay commission until goods are services have been delivered.</li>
+                  
+                  </ul>
+                 <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #4CAF50; " id = "like6">
+                    Like </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" style = "  background-color: #f9ee02; ">
+                    <i class="fa fa-times"></i>
+                    Close </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jqueryeasing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+      <script>
+  
+          $(document).ready(function()
+{   
+          
+            $("#like1").click(function(){
+    alert("updated");
+              
+    $.ajax(
+      
+      {
+      url: "http://port-8080.db-luckymantung547474.codeanyapp.com/favlist", 
+      type: 'POST',
+      data: "email="+ localStorage.getItem("email") +"&password="+localStorage.getItem("password")+ "&like1=added",
+      success: function(result){
+      //  alert(result);
+    
+        if (result=="email"){
+     //   alert("Finish");
+        }
+      //alert(result);  
+     // $("#div1").html(result);
+          },error: function (xhr, textStatus, errorThrown) {
+   alert(textStatus);
+      console.log(textStatus);
+                     }
+      }
+    );          
+  });
+             });
+        
+        </script>
+    <script>
+  
+          $(document).ready(function()
+{   
+          
+            $("#like2").click(function(){
+    alert("updated");
+              
+    $.ajax(
+      
+      {
+      url: "http://port-8080.db-luckymantung547474.codeanyapp.com/favlist", 
+      type: 'POST',
+      data: "email="+ localStorage.getItem("email") +"&password="+localStorage.getItem("password")+ "&like2=added",
+      success: function(result){
+      //  alert(result);
+    
+        if (result=="email"){
+      //  alert("Finish");
+        }
+      //alert(result);  
+     // $("#div1").html(result);
+          },error: function (xhr, textStatus, errorThrown) {
+  alert(textStatus);
+      console.log(textStatus);
+                     }
+      }
+    );          
+  });
+             });
+        
+        </script>
+    
+     <script>
+  
+          $(document).ready(function()
+{   
+          
+            $("#like3").click(function(){
+    alert("updated");
+              
+    $.ajax(
+      
+      {
+      url: "http://port-8080.db-luckymantung547474.codeanyapp.com/favlist", 
+      type: 'POST',
+      data: "email="+ localStorage.getItem("email") +"&password="+localStorage.getItem("password")+ "&like3=added",
+      success: function(result){
+     //   alert(result);
+    
+        if (result=="email"){
+      //  alert("Finish");
+        }
+      //alert(result);  
+     // $("#div1").html(result);
+          },error: function (xhr, textStatus, errorThrown) {
+  alert(textStatus);
+      console.log(textStatus);
+                     }
+      }
+    );          
+  });
+             });
+        
+        </script>
+    
+     <script>
+  
+          $(document).ready(function()
+{   
+          
+            $("#like4").click(function(){
+    alert("updated");
+              
+    $.ajax(
+      
+      {
+      url: "http://port-8080.db-luckymantung547474.codeanyapp.com/favlist", 
+      type: 'POST',
+      data: "email="+ localStorage.getItem("email") +"&password="+localStorage.getItem("password")+ "&like4=added",
+      success: function(result){
+      //  alert(result);
+    
+        if (result=="email"){
+     //   alert("Finish");
+        }
+      //alert(result);  
+     // $("#div1").html(result);
+          },error: function (xhr, textStatus, errorThrown) {
+  alert(textStatus);
+      console.log(textStatus);
+                     }
+      }
+    );          
+  });
+             });
+        
+        </script>
+    
+     <script>
+  
+          $(document).ready(function()
+{   
+          
+            $("#like5").click(function(){
+    alert("updated");
+              
+    $.ajax(
+      
+      {
+      url: "http://port-8080.db-luckymantung547474.codeanyapp.com/favlist", 
+      type: 'POST',
+      data: "email="+ localStorage.getItem("email") +"&password="+localStorage.getItem("password")+ "&like5=added",
+      success: function(result){
+     //   alert(result);
+    
+        if (result=="email"){
+      //  alert("Finish");
+        }
+      //alert(result);  
+     // $("#div1").html(result);
+          },error: function (xhr, textStatus, errorThrown) {
+  alert(textStatus);
+      console.log(textStatus);
+                     }
+      }
+    );          
+  });
+             });
+        
+        </script>
+    
+     <script>
+  
+          $(document).ready(function()
+{   
+          
+            $("#like6").click(function(){
+    alert("updated");
+              
+    $.ajax(
+      
+      {
+      url: "http://port-8080.db-luckymantung547474.codeanyapp.com/favlist", 
+      type: 'POST',
+      data: "email="+ localStorage.getItem("email") +"&password="+localStorage.getItem("password")+"&like6=added",
+      success: function(result){
+    //    alert(result);
+    
+        if (result=="email"){
+      //  alert("Finish");
+        }
+      //alert(result);  
+     // $("#div1").html(result);
+          },error: function (xhr, textStatus, errorThrown) {
+  alert(textStatus);
+      console.log(textStatus);
+                     }
+      }
+    );          
+  });
+             });
+        
+        </script>
+    
+  </body>
+
+</html>
